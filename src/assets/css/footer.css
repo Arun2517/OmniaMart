@@ -1,0 +1,29 @@
+.trust{ background:var(--ink); color:var(--white); }
+  .trust-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:32px; }
+  .trust-item{ display:flex; gap:16px; align-items:flex-start; }
+  .trust-item svg{ width:26px; height:26px; stroke:var(--amber); flex-shrink:0; }
+  .trust-item h4{ font-family:var(--display); font-size:15px; margin-bottom:6px; }
+  .trust-item p{ font-size:13px; color:rgba(255,255,255,0.6); line-height:1.5; }
+  @media(max-width:900px){ .trust-grid{grid-template-columns:1fr 1fr;} }
+
+  .news{
+    background:linear-gradient(120deg, var(--deep-blue), var(--electric)); color:var(--white);
+    border-radius:28px; margin:0 48px; padding:60px 56px;
+    display:flex; align-items:center; justify-content:space-between; gap:36px;
+  }
+  .news h2{ font-size:clamp(24px,2.8vw,34px); max-width:420px; }
+  .news p{ opacity:0.85; margin-top:10px; font-size:14px; max-width:400px; }
+  .news-form{ display:flex; gap:10px; flex-shrink:0; }
+  .news-form input{ padding:13px 18px; border-radius:100px; border:none; width:240px; font-size:14px; outline:none; }
+  @media(max-width:900px){ .news{flex-direction:column; align-items:flex-start; margin:0 18px; padding:36px 26px;} .news-form{flex-direction:column; width:100%;} .news-form input{width:100%;} }
+
+  footer{ padding:70px 48px 30px; }
+  .footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:36px; padding-bottom:40px; border-bottom:1px solid var(--line); }
+  .footer-brand p{ color:var(--slate); font-size:14px; max-width:280px; line-height:1.6; margin-top:14px;}
+  .footer-col h5{ font-family:var(--display); font-size:14px; margin-bottom:16px; }
+  .footer-col ul{ list-style:none; display:flex; flex-direction:column; gap:10px; }
+  .footer-col a{ font-size:14px; color:var(--slate); }
+  .footer-col a:hover{ color:var(--electric); }
+  .footer-bottom{ display:flex; justify-content:space-between; align-items:center; padding-top:24px; font-size:13px; color:var(--slate); flex-wrap:wrap; gap:10px; }
+  .footer-admin-link{ font-size:12px; color:var(--slate); opacity:0.6; }
+  .footer-admin-link:hover{ opacity:1; color:var(--electric); }

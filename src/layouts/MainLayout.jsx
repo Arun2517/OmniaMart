@@ -1,0 +1,5 @@
+<>
+  <Navbar />
+  {children}
+  <Footer />
+</>
