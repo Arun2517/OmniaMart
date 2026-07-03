@@ -1,10 +1,50 @@
+:root {
+  --ink:#0A1628;
+  --deep-blue:#1B3A8C;
+  --electric:#2F6FED;
+  --cloud:#F6F8FB;
+  --amber:#F2A93B;
+  --slate:#64748B;
+  --white:#FFFFFF;
+  --red:#DC2626;
+  --green:#16A34A;
+  --line: rgba(10,22,40,0.10);
+  --display: 'Space Grotesk', sans-serif;
+  --body: 'Inter', sans-serif;
+}
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:Inter,sans-serif;
-    background:#F6F8FB;
+  font-family:var(--body);
+  color:var(--ink);
+  background:var(--cloud);
+  overflow-x:hidden;
 }
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+@import "./navbar.css";
+@import "./hero.css";
+@import "./products.css";
+@import "./footer.css";
+@import "./cart.css";
+@import "./modal.css";
+@import "./admin.css";
+@import "./responsive.css";
