@@ -1,11 +1,10 @@
 function ProductFilter({
-
-    search,
-    setSearch,
-
-    category,
-    setCategory,
-
+  search,
+  setSearch,
+  category,
+  setCategory,
+  sortBy,
+  setSortBy,
 }){
   return (
     <div className="filter-bar">
@@ -46,12 +45,15 @@ function ProductFilter({
 </button>
       </div>
 
-      <select>
-        <option>Featured</option>
-        <option>Price Low → High</option>
-        <option>Price High → Low</option>
-        <option>A → Z</option>
-      </select>
+        <select
+        value={sortBy}
+        onChange={(e) => setSortBy(e.target.value)}
+        >
+        <option value="featured">Featured</option>
+        <option value="low">Price Low → High</option>
+        <option value="high">Price High → Low</option>
+        <option value="name">A → Z</option>
+        </select>
 
     </div>
   );
