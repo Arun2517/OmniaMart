@@ -8,6 +8,8 @@ import Cart from "./pages/Cart";
 import Orders from "./pages/Orders";
 import Product from "./pages/Product";
 import NotFound from "./pages/NotFound";
+import Admin from "./pages/Admin";
+
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
         <Route path="/product/:id" element={<Product />} />
 
         <Route path="*" element={<NotFound />} />
+        
+        <Route path="/admin" element={<Admin />} />
 
       </Routes>
     </BrowserRouter>
