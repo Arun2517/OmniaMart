@@ -1,44 +1,112 @@
+import { useState } from "react";
+
 import AdminLayout from "../components/admin/AdminLayout";
 import DashboardCards from "../components/admin/DashboardCards";
 import ProductTable from "../components/admin/ProductTable";
+import ProductModal from "../components/admin/ProductModal";
 
 import useProducts from "../hooks/useProducts";
 
 function Admin() {
 
-    const {
+  const {
+    products,
+    loading,
+    loadProducts,
+    removeProduct,
+  } = useProducts();
 
-        products,
+  const [showModal, setShowModal] = useState(false);
 
-        loading,
+  const [editMode, setEditMode] = useState(false);
 
-        removeProduct,
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
-    } = useProducts();
+  function handleAdd() {
 
-    if(loading){
+    setEditMode(false);
 
-        return <h2>Loading...</h2>;
+    setSelectedProduct(null);
 
-    }
+    setShowModal(true);
 
-    return(
+  }
 
-        <AdminLayout>
+  function handleEdit(product) {
 
-            <DashboardCards/>
+    setEditMode(true);
 
-            <ProductTable
+    setSelectedProduct(product);
 
-                products={products}
+    setShowModal(true);
 
-                onDelete={removeProduct}
+  }
 
-            />
+  function closeModal() {
 
-        </AdminLayout>
+    setShowModal(false);
 
-    );
+    setEditMode(false);
+
+    setSelectedProduct(null);
+
+  }
+
+  if (loading) {
+
+    return <h2>Loading...</h2>;
+
+  }
+
+  return (
+
+    <AdminLayout>
+
+      <DashboardCards />
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          marginBottom: "20px",
+        }}
+      >
+
+        <h2>Products</h2>
+
+        <button
+          onClick={handleAdd}
+          style={{
+            padding: "10px 18px",
+            background: "#2563eb",
+            color: "#fff",
+            border: "none",
+            borderRadius: "8px",
+            cursor: "pointer",
+          }}
+        >
+          + Add Product
+        </button>
+
+      </div>
+
+      <ProductTable
+        products={products}
+        onDelete={removeProduct}
+        onEdit={handleEdit}
+      />
+
+      <ProductModal
+        isOpen={showModal}
+        onClose={closeModal}
+        onSuccess={loadProducts}
+        editMode={editMode}
+        productData={selectedProduct}
+      />
+
+    </AdminLayout>
+
+  );
 
 }
 

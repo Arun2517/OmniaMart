@@ -11,14 +11,19 @@ function ProductCard({ product }) {
       <div className="product-media media-style">
         <span className="product-tag">{product.category}</span>
 
-        <div
-          style={{
-            width: "120px",
-            height: "120px",
-            borderRadius: "50%",
-            background: "#ddd",
-          }}
-        />
+    <img
+      src={
+        product.image
+          ? `http://localhost:5000/uploads/${product.image}`
+          : "https://placehold.co/120x120?text=No+Image"
+      }
+      alt={product.name}
+      className="product-image"
+      onError={(e) => {
+        e.target.src =
+          "https://placehold.co/120x120?text=No+Image";
+      }}
+    />
       </div>
 
       <div className="product-info">

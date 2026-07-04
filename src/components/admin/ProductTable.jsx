@@ -1,90 +1,74 @@
 import "./ProductTable.css";
 
 function ProductTable({
+  products,
+  onDelete,
+  onEdit,
+}) {
 
-    products,
+  return (
+    <div className="product-table">
 
-    onDelete,
+      <table>
 
-}){
+        <thead>
 
-    return(
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
 
-        <div className="product-table">
+        </thead>
 
-            <table>
+        <tbody>
 
-                <thead>
+          {products.map((product) => (
 
-                    <tr>
+            <tr key={product.id}>
 
-                        <th>ID</th>
+              <td>{product.id}</td>
 
-                        <th>Name</th>
+              <td>{product.name}</td>
 
-                        <th>Category</th>
+              <td>{product.category}</td>
 
-                        <th>Price</th>
+              <td>₹{product.price}</td>
 
-                        <th>Stock</th>
+              <td>{product.stock}</td>
 
-                        <th>Status</th>
+              <td>{product.status}</td>
 
-                        <th>Actions</th>
+              <td>
 
-                    </tr>
+                <button
+                  onClick={() => onEdit(product)}
+                >
+                  ✏️
+                </button>
 
-                </thead>
+                <button
+                  onClick={() => onDelete(product.id)}
+                >
+                  🗑
+                </button>
 
-                <tbody>
+              </td>
 
-                    {products.map(product=>(
+            </tr>
 
-                        <tr key={product.id}>
+          ))}
 
-                            <td>{product.id}</td>
+        </tbody>
 
-                            <td>{product.name}</td>
+      </table>
 
-                            <td>{product.category}</td>
-
-                            <td>₹{product.price}</td>
-
-                            <td>{product.stock}</td>
-
-                            <td>{product.status}</td>
-
-                            <td>
-
-                                <button>
-
-                                    ✏️
-
-                                </button>
-
-                                <button
-                                    onClick={()=>
-                                        onDelete(product.id)
-                                    }
-                                >
-
-                                    🗑
-
-                                </button>
-
-                            </td>
-
-                        </tr>
-
-                    ))}
-
-                </tbody>
-
-            </table>
-
-        </div>
-
-    );
+    </div>
+  );
 
 }
 

@@ -26,3 +26,10 @@ export async function deleteProduct(id) {
   );
   return response.data;
 }
+
+export async function getProduct(id) {
+  const response = await axios.get(
+    `${API}/${id}`
+  );
+  return response.data;
+}
