@@ -320,7 +320,8 @@ Computer Science Engineer
 AI & Full Stack Developer
 
 LinkedIn
-linkedin.com/in/g-arun-511649213/
+
+https://linkedin.com/in/g-arun-511649213/
 
 GitHub
 
