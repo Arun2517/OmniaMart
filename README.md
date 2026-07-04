@@ -1,87 +1,103 @@
 # 🛍️ Omnia Mart
 
-A modern full-stack e-commerce platform inspired by Flipkart and Amazon, built using **React**, **Express.js**, and **MySQL**.
+> A modern full-stack e-commerce platform inspired by Amazon and Flipkart, built with **React**, **Express.js**, and **MySQL**.
 
-> 🚀 Currently under active development.
-
----
-
-## 📸 Preview
-
-<img src="./src/assets/images/logo.png" width="120" alt="Omnia Mart Logo"/>
+![Status](https://img.shields.io/badge/Status-Active%20Development-brightgreen)
+![React](https://img.shields.io/badge/React-19-blue)
+![Express](https://img.shields.io/badge/Express-5.x-black)
+![MySQL](https://img.shields.io/badge/MySQL-9.x-orange)
 
 ---
 
-# ✨ Features
+# 📖 About
 
-## ✅ Completed
+Omnia Mart is a modern e-commerce application developed from scratch to learn and demonstrate full-stack web development.
 
-- Modern Responsive UI
-- React + Vite
-- Product Listing
+The project follows an industry-standard architecture using React for the frontend, Express.js for the backend, and MySQL for data persistence.
+
+---
+
+# 🚀 Current Progress
+
+## Overall Project Progress
+
+```text
+█████████████░░░░░░░ 65%
+```
+
+**Current Completion : 65%**
+
+---
+
+## Module Progress
+
+| Module | Status |
+|----------|----------|
+| ✅ React UI | 100% |
+| ✅ Homepage | 100% |
+| ✅ Shopping Cart | 100% |
+| ✅ Product Module | 100% |
+| ✅ Express Backend | 100% |
+| ✅ MySQL Integration | 100% |
+| 🚧 Authentication | 70% |
+| ⏳ Product APIs | 0% |
+| ⏳ Order System | 0% |
+| ⏳ Admin Dashboard | 0% |
+| ⏳ Payment Gateway | 0% |
+| ⏳ Deployment | 0% |
+
+---
+
+# ✨ Completed Features
+
+## Frontend
+
+- Responsive React UI
+- Hero Section
+- Featured Products
+- Product Cards
 - Product Search
 - Category Filtering
 - Product Sorting
 - Shopping Cart
 - Cart Drawer
 - Quantity Management
-- Remove Products
+- Remove from Cart
 - Live Cart Total
 - React Context API
-- Responsive Design
+- React Router
 
 ---
 
-## 🚧 In Progress
+## Backend
 
-- User Registration
-- User Login
-- Admin Login
-- Protected Routes
-- User Profile
-
----
-
-## 🔜 Planned Features
-
-### Customer
-
-- User Authentication (JWT)
-- Profile Management
-- Address Management
-- Wishlist
-- Checkout
-- Order History
-- Order Tracking
-
-### Admin
-
-- Admin Dashboard
-- Product Management
-- Inventory Management
-- Customer Management
-- Order Management
-- Sales Analytics
-
-### Backend
-
-- Express.js REST API
-- MySQL Database
-- JWT Authentication
-- Image Upload
-- Email Notifications
-
-### Deployment
-
-- Docker Support
-- Nginx
-- SSL
-- BigRock Domain
-- Production Deployment
+- Express.js Server
+- Environment Variables
+- MVC Folder Structure
+- MySQL Connection
+- Database Configuration
 
 ---
 
-# 🏗️ Tech Stack
+## Database
+
+- MySQL Community Server
+- Database Created
+- Users Table
+- Password Hashing using bcrypt
+
+---
+
+## Authentication
+
+- User Registration API
+- Email Duplicate Checking
+- Password Encryption
+- API Tested Successfully using Postman
+
+---
+
+# 🛠️ Tech Stack
 
 ## Frontend
 
@@ -91,19 +107,23 @@ A modern full-stack e-commerce platform inspired by Flipkart and Amazon, built u
 - Context API
 - CSS3
 
-## Backend *(Upcoming)*
+## Backend
 
 - Node.js
 - Express.js
-- MySQL
-- JWT
-- Bcrypt
+- MySQL2
+- bcrypt
+- JWT *(Coming Soon)*
+- dotenv
+- CORS
 
-## Deployment *(Upcoming)*
+## Database
 
-- Nginx
-- PM2
-- BigRock Hosting
+- MySQL Community Server 9
+
+## API Testing
+
+- Postman
 
 ---
 
@@ -112,125 +132,182 @@ A modern full-stack e-commerce platform inspired by Flipkart and Amazon, built u
 ```text
 OmniaMart/
 
-├── public/
 ├── src/
 │
-├── assets/
-│   ├── css/
-│   └── images/
+├── public/
 │
-├── components/
-│   ├── Cart/
-│   ├── Navbar/
-│   ├── Footer/
-│   ├── Hero/
-│   └── Product/
+├── server/
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── uploads/
+│   ├── .env
+│   └── server.js
 │
-├── context/
+├── database/
 │
-├── data/
+├── README.md
 │
-├── hooks/
+├── package.json
 │
-├── layouts/
-│
-├── pages/
-│
-├── App.jsx
-├── main.jsx
-│
-package.json
-README.md
+└── vite.config.js
 ```
 
 ---
 
-# 🚀 Installation
+# 🚧 Current Architecture
 
-Clone the repository
+```text
+                 React
 
-```bash
-git clone https://github.com/Arun2517/OmniaMart.git
-```
+                   │
 
-Go to the project
+                   ▼
 
-```bash
-cd OmniaMart
-```
+             React Router
 
-Install dependencies
+                   │
 
-```bash
-npm install
-```
+                   ▼
 
-Start development server
+          Express REST API
 
-```bash
-npm run dev
+                   │
+
+                   ▼
+
+               Controllers
+
+                   │
+
+                   ▼
+
+                 Models
+
+                   │
+
+                   ▼
+
+                 MySQL
 ```
 
 ---
 
-# 📈 Current Progress
+# 🗄️ Database
 
-| Module | Status |
-|---------|--------|
-| React Setup | ✅ |
-| Homepage | ✅ |
-| Product Module | ✅ |
-| Shopping Cart | ✅ |
-| Search | ✅ |
-| Category Filter | ✅ |
-| Sorting | ✅ |
-| Authentication | 🚧 |
-| Backend API | ⏳ |
-| MySQL | ⏳ |
-| Admin Dashboard | ⏳ |
-| Orders | ⏳ |
-| Deployment | ⏳ |
+Current Tables
+
+- users ✅
+
+Upcoming Tables
+
+- admins
+- products
+- cart
+- cart_items
+- orders
+- order_items
+- addresses
 
 ---
 
-# 🎯 Roadmap
+# 📅 Development Roadmap
 
-### Sprint 1 ✅
+## ✅ Sprint 1
 
 - Shopping Cart
 - Cart Drawer
-- Quantity Management
+- Context API
 
-### Sprint 2 ✅
+---
+
+## ✅ Sprint 2
 
 - Product Search
 - Category Filter
 - Product Sorting
 
-### Sprint 3 🚧
+---
 
-- Register
-- Login
-- JWT Authentication
-- User Profile
+## 🚧 Sprint 3 (Current)
 
-### Sprint 4
+- Express Backend ✅
+- MySQL Connection ✅
+- Users Table ✅
+- Registration API ✅
+- Password Hashing ✅
+- Login API ⏳
+- JWT Authentication ⏳
+- Protected Routes ⏳
+- React Authentication ⏳
 
-- Express API
-- MySQL
-- REST Services
+---
 
-### Sprint 5
+## Sprint 4
 
+- Product APIs
+- CRUD Operations
+- Admin APIs
+
+---
+
+## Sprint 5
+
+- Orders
+- Checkout
+- Inventory
 - Admin Dashboard
-- Product CRUD
-- Order Management
 
-### Sprint 6
+---
+
+## Sprint 6
 
 - Payment Gateway
-- Production Deployment
-- BigRock Domain
+- Docker
+- Nginx
+- SSL
+- BigRock Deployment
+
+---
+
+# ⚡ Installation
+
+Clone repository
+
+```bash
+git clone https://github.com/Arun2517/OmniaMart.git
+```
+
+Frontend
+
+```bash
+npm install
+npm run dev
+```
+
+Backend
+
+```bash
+cd server
+
+npm install
+
+npm run dev
+```
+
+---
+
+# 📸 Screenshots
+
+Coming Soon
+
+- Homepage
+- Shopping Cart
+- Login Page
+- Dashboard
+- Admin Panel
 
 ---
 
@@ -238,14 +315,18 @@ npm run dev
 
 **Arun G**
 
-- GitHub: https://github.com/Arun2517
-- LinkedIn: https://www.linkedin.com/in/g-arun-511649213/
+Computer Science Engineer
+
+AI & Full Stack Developer
+
+LinkedIn
+linkedin.com/in/g-arun-511649213/
+
+GitHub
+
+https://github.com/Arun2517
 
 ---
 
-# ⭐ Support
 
-If you like this project, consider giving it a **⭐ Star** on GitHub.
-
----
-
+⭐ If you like this project, consider giving it a Star on GitHub.
