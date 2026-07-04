@@ -1,109 +1,172 @@
 # 🛍️ Omnia Mart
 
-> A modern full-stack e-commerce platform inspired by Amazon and Flipkart, built with **React**, **Express.js**, and **MySQL**.
+> A Full Stack Modern E-Commerce Platform built with React, Node.js, Express & MySQL.
 
-![Status](https://img.shields.io/badge/Status-Active%20Development-brightgreen)
-![React](https://img.shields.io/badge/React-19-blue)
-![Express](https://img.shields.io/badge/Express-5.x-black)
-![MySQL](https://img.shields.io/badge/MySQL-9.x-orange)
-
----
-
-# 📖 About
-
-Omnia Mart is a modern e-commerce application developed from scratch to learn and demonstrate full-stack web development.
-
-The project follows an industry-standard architecture using React for the frontend, Express.js for the backend, and MySQL for data persistence.
+![Status](https://img.shields.io/badge/Status-Active-success)
+![Sprint](https://img.shields.io/badge/Sprint-6-blue)
+![Progress](https://img.shields.io/badge/Overall-90%25-brightgreen)
 
 ---
 
-# 🚀 Current Progress
+# 🚀 Project Overview
 
-## Overall Project Progress
+Omnia Mart is a modern full-stack e-commerce platform designed with a professional architecture using React, Express, Node.js and MySQL.
 
-```text
-█████████████░░░░░░░ 65%
+The project includes:
+
+- Customer Shopping Portal
+- Admin Dashboard
+- Product Management
+- Authentication System
+- Image Upload
+- Shopping Cart
+- REST API
+- MVC Backend
+
+---
+
+# 📊 Project Progress
+
+```
+Overall Progress
+
+██████████████████░░ 90%
+
+Sprint 1  ✅
+Sprint 2  ✅
+Sprint 3  ✅
+Sprint 4  ✅
+Sprint 5  ✅
+Sprint 6  🚧
 ```
 
-**Current Completion : 65%**
-
 ---
 
-## Module Progress
+# ✅ Completed Features
 
-| Module | Status |
-|----------|----------|
-| ✅ React UI | 100% |
-| ✅ Homepage | 100% |
-| ✅ Shopping Cart | 100% |
-| ✅ Product Module | 100% |
-| ✅ Express Backend | 100% |
-| ✅ MySQL Integration | 100% |
-| 🚧 Authentication | 70% |
-| ⏳ Product APIs | 0% |
-| ⏳ Order System | 0% |
-| ⏳ Admin Dashboard | 0% |
-| ⏳ Payment Gateway | 0% |
-| ⏳ Deployment | 0% |
+## 🖥 Frontend
 
----
-
-# ✨ Completed Features
-
-## Frontend
-
-- Responsive React UI
-- Hero Section
-- Featured Products
+- Responsive UI
+- Modern Homepage
+- Product Grid
 - Product Cards
-- Product Search
-- Category Filtering
+- Search Products
+- Category Filter
 - Product Sorting
 - Shopping Cart
 - Cart Drawer
-- Quantity Management
-- Remove from Cart
-- Live Cart Total
-- React Context API
-- React Router
+- Login Page
+- Register Page
+- Profile Page
 
 ---
 
-## Backend
+## 🔐 Authentication
 
-- Express.js Server
-- Environment Variables
-- MVC Folder Structure
-- MySQL Connection
-- Database Configuration
-
----
-
-## Database
-
-- MySQL Community Server
-- Database Created
-- Users Table
-- Password Hashing using bcrypt
+- JWT Authentication
+- Register
+- Login
+- Logout
+- Protected Routes
+- Auth Context
+- Local Storage Token
 
 ---
 
-## Authentication
+## 🛒 Product Management
 
-- User Registration API
-- Email Duplicate Checking
-- Password Encryption
-- API Tested Successfully using Postman
+- View Products
+- Add Product
+- Edit Product
+- Delete Product
+- Live Product Updates
+- Product Image Preview
 
 ---
 
-# 🛠️ Tech Stack
+## 🏢 Admin Dashboard
+
+- Sidebar
+- Top Navigation
+- Dashboard Cards
+- Product Table
+- Add Product Modal
+- Edit Product Modal
+- Delete Product
+- Image Upload
+- Image Preview
+
+---
+
+## ⚙ Backend
+
+- Express.js
+- MVC Architecture
+- REST API
+- JWT Middleware
+- MySQL Integration
+- Multer Image Upload
+- Static Image Hosting
+
+---
+
+## 🗄 Database
+
+### Users
+
+- Register
+- Login
+- Customer/Admin Roles
+
+### Products
+
+- CRUD Operations
+- Image Storage
+- Stock Management
+- Category
+- Status
+
+---
+
+# 📂 Project Structure
+
+```
+OmniaMart
+
+client/
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │     ├── admin/
+│   │     ├── Product/
+│   │     └── Navbar/
+│   ├── context/
+│   ├── hooks/
+│   ├── pages/
+│   ├── services/
+│   └── App.jsx
+│
+server/
+│
+├── config/
+├── controllers/
+├── middleware/
+├── models/
+├── routes/
+├── uploads/
+└── server.js
+```
+
+---
+
+# 🛠 Technology Stack
 
 ## Frontend
 
-- React 19
-- Vite
+- React
 - React Router
+- Axios
 - Context API
 - CSS3
 
@@ -111,223 +174,223 @@ The project follows an industry-standard architecture using React for the fronte
 
 - Node.js
 - Express.js
+- JWT
+- Multer
 - MySQL2
 - bcrypt
-- JWT *(Coming Soon)*
-- dotenv
-- CORS
 
 ## Database
 
-- MySQL Community Server 9
-
-## API Testing
-
-- Postman
+- MySQL
 
 ---
 
-# 📂 Project Structure
+# 🖼 Image Upload Flow
 
-```text
-OmniaMart/
+```
+Choose Image
 
-├── src/
-│
-├── public/
-│
-├── server/
-│   ├── config/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── uploads/
-│   ├── .env
-│   └── server.js
-│
-├── database/
-│
-├── README.md
-│
-├── package.json
-│
-└── vite.config.js
+        │
+
+        ▼
+
+React Preview
+
+        │
+
+        ▼
+
+POST /api/upload
+
+        │
+
+        ▼
+
+Multer
+
+        │
+
+        ▼
+
+uploads/
+
+        │
+
+        ▼
+
+MySQL
+
+        │
+
+        ▼
+
+Homepage
 ```
 
 ---
 
-# 🚧 Current Architecture
+# 🔄 Product Flow
 
-```text
-                 React
+```
+Admin Dashboard
 
-                   │
+        │
 
-                   ▼
+        ▼
 
-             React Router
+Add/Edit Product
 
-                   │
+        │
 
-                   ▼
+        ▼
 
-          Express REST API
+Express API
 
-                   │
+        │
 
-                   ▼
+        ▼
 
-               Controllers
+MySQL
 
-                   │
+        │
 
-                   ▼
+        ▼
 
-                 Models
-
-                   │
-
-                   ▼
-
-                 MySQL
+Homepage Updates Automatically
 ```
 
 ---
 
-# 🗄️ Database
+# 🔐 Authentication Flow
 
-Current Tables
+```
+Login
 
-- users ✅
+↓
 
-Upcoming Tables
+JWT Token
 
-- admins
-- products
-- cart
-- cart_items
-- orders
-- order_items
-- addresses
+↓
 
----
+Local Storage
 
-# 📅 Development Roadmap
+↓
 
-## ✅ Sprint 1
+Protected Routes
 
-- Shopping Cart
-- Cart Drawer
-- Context API
+↓
+
+Authenticated User
+```
 
 ---
 
-## ✅ Sprint 2
+# 📸 Current Screens
 
-- Product Search
-- Category Filter
-- Product Sorting
+✅ Home Page
 
----
+✅ Login
 
-## 🚧 Sprint 3 (Current)
+✅ Register
 
-- Express Backend ✅
-- MySQL Connection ✅
-- Users Table ✅
-- Registration API ✅
-- Password Hashing ✅
-- Login API ⏳
-- JWT Authentication ⏳
-- Protected Routes ⏳
-- React Authentication ⏳
+✅ Shopping Cart
+
+✅ Product CRUD
+
+✅ Product Images
+
+✅ Admin Dashboard
 
 ---
 
-## Sprint 4
-
-- Product APIs
-- CRUD Operations
-- Admin APIs
-
----
-
-## Sprint 5
-
-- Orders
-- Checkout
-- Inventory
-- Admin Dashboard
-
----
+# 🚧 Upcoming Features
 
 ## Sprint 6
 
+- Role Based Authorization
+- Protected Admin Dashboard
+- Live Dashboard Statistics
+
+---
+
+## Sprint 7
+
+- Checkout
+- Orders Module
+- Order History
+- Customer Profile
+
+---
+
+## Sprint 8
+
 - Payment Gateway
+- Sales Analytics
+- Revenue Reports
+
+---
+
+## Sprint 9
+
+- Deployment
 - Docker
 - Nginx
 - SSL
-- BigRock Deployment
+- Production Server
 
 ---
 
-# ⚡ Installation
+# 📈 Development Status
 
-Clone repository
-
-```bash
-git clone https://github.com/Arun2517/OmniaMart.git
-```
-
-Frontend
-
-```bash
-npm install
-npm run dev
-```
-
-Backend
-
-```bash
-cd server
-
-npm install
-
-npm run dev
-```
+| Module | Status |
+|----------|--------|
+| Frontend UI | ✅ 100% |
+| Authentication | ✅ 100% |
+| Backend API | ✅ 100% |
+| Product CRUD | ✅ 100% |
+| Image Upload | ✅ 100% |
+| Admin Dashboard | ✅ 95% |
+| Dashboard Analytics | 🚧 |
+| Orders | ⏳ |
+| Checkout | ⏳ |
+| Payment | ⏳ |
+| Deployment | ⏳ |
 
 ---
 
-# 📸 Screenshots
+# 🎯 Current Milestone
 
-Coming Soon
+✔ Full Stack E-Commerce Platform
 
-- Homepage
-- Shopping Cart
-- Login Page
-- Dashboard
-- Admin Panel
+✔ Admin Dashboard
+
+✔ Product CRUD
+
+✔ Image Upload
+
+✔ JWT Authentication
+
+✔ MySQL Integration
 
 ---
 
-# 👨‍💻 Author
+# 👨‍💻 Developer
 
 **Arun G**
 
-Computer Science Engineer
+B.Tech Computer Science & Engineering
 
-AI & Full Stack Developer
+Full Stack Developer | AI & ML Enthusiast | System Engineer
 
-LinkedIn
+LinkedIn:
 
-https://linkedin.com/in/g-arun-511649213/
+https://www.linkedin.com/in/g-arun-511649213/
 
-GitHub
-
+GitHub:
 https://github.com/Arun2517
 
 ---
 
+# ⭐ If you like this project
 
-⭐ If you like this project, consider giving it a Star on GitHub.
+Please consider giving it a ⭐ on GitHub.
