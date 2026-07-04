@@ -5,6 +5,7 @@ import "../assets/css/auth.css";
 
 import { loginUser } from "../services/authService";
 import { useAuth } from "../context/AuthContext";
+import { jwtDecode } from "jwt-decode";
 
 function Login() {
   const navigate = useNavigate();
@@ -32,13 +33,21 @@ function Login() {
 
       const data = await loginUser(form);
 
-      // Save JWT using AuthContext
-      login(data.token);
+login(data.token);
 
-      alert("Login Successful!");
+const decoded = jwtDecode(data.token);
 
-      navigate("/");
+alert("Login Successful!");
 
+if (decoded.role === "admin") {
+
+  navigate("/admin");
+
+} else {
+
+  navigate("/");
+
+}
     } catch (err) {
       alert(
         err.response?.data?.message ||

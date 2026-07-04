@@ -1,59 +1,73 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import { jwtDecode } from "jwt-decode";
 
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
 
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [user, setUser] = useState(null);
 
-    useEffect(() => {
+  useEffect(() => {
 
-        const token = localStorage.getItem("token");
+    const token = localStorage.getItem("token");
 
-        if (token) {
+    if (token) {
 
-            setIsAuthenticated(true);
+      try {
 
-        }
+        const decoded = jwtDecode(token);
 
-    }, []);
+        setUser(decoded);
 
-    function login(token) {
-
-        localStorage.setItem("token", token);
-
-        setIsAuthenticated(true);
-
-    }
-
-    function logout() {
+      } catch {
 
         localStorage.removeItem("token");
 
-        setIsAuthenticated(false);
+      }
 
     }
 
-    return (
+  }, []);
 
-        <AuthContext.Provider
-            value={{
-                isAuthenticated,
-                login,
-                logout,
-            }}
-        >
+  function login(token) {
 
-            {children}
+    localStorage.setItem("token", token);
 
-        </AuthContext.Provider>
+    const decoded = jwtDecode(token);
 
-    );
+    setUser(decoded);
+
+  }
+
+  function logout() {
+
+    localStorage.removeItem("token");
+
+    setUser(null);
+
+  }
+
+  return (
+
+    <AuthContext.Provider
+      value={{
+        user,
+        login,
+        logout,
+        isAuthenticated: !!user,
+      }}
+    >
+
+      {children}
+
+    </AuthContext.Provider>
+
+  );
 
 }
 
 export function useAuth() {
 
-    return useContext(AuthContext);
+  return useContext(AuthContext);
 
 }

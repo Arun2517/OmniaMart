@@ -1,4 +1,6 @@
 import express from "express";
+import { verifyToken } from "../middleware/authMiddleware.js";
+import { isAdmin } from "../middleware/adminMiddleware.js";
 
 import {
   getProducts,
@@ -26,18 +28,33 @@ router.get("/:id", getProduct);
 // ADD PRODUCT
 // ===============================
 
-router.post("/", addProduct);
+router.post(
+  "/",
+  verifyToken,
+  isAdmin,
+  addProduct
+);
 
 // ===============================
 // UPDATE PRODUCT
 // ===============================
 
-router.put("/:id", editProduct);
+router.put(
+  "/:id",
+  verifyToken,
+  isAdmin,
+  editProduct
+);
 
 // ===============================
 // DELETE PRODUCT
 // ===============================
 
-router.delete("/:id", removeProduct);
+router.delete(
+  "/:id",
+  verifyToken,
+  isAdmin,
+  removeProduct
+);
 
 export default router;
