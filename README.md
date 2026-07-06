@@ -383,7 +383,6 @@ B.Tech Computer Science & Engineering
 Full Stack Developer | AI & ML Enthusiast | System Engineer
 
 LinkedIn:
-
 https://www.linkedin.com/in/g-arun-511649213/
 
 GitHub:
